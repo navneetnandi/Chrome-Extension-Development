@@ -1,0 +1,33 @@
+{
+
+	//The mandatory fields
+	"manifest_version" : 2 ,
+	"name" : "Budget Manager" ,
+	"version" : "1.0",
+
+	//Optional Fields
+	"description" : "Tracks Yor Budget" ,
+	"icons" : {
+		"128": "icon128.png",
+    	"48": "icon48.png",
+    	"16": "icon16.png"
+  	} ,
+  	"browser_action" : {
+  		"default_icon" : "icon48.png",
+  		"default_popup" : "popup.html"
+  	},
+
+  	"options_page" : "options.html" ,
+
+  	"background": {
+  		"scripts" : ["eventPage.js"],
+  		"persistent" : false //Setting persistent to false means these are not background pages, rather they are events pages
+  	},
+
+  	"permissions" : [
+  		"storage",
+  		"notifications",
+  		"contextMenus"
+  	]
+
+}
